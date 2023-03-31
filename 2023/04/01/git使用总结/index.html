@@ -16,22 +16,25 @@
   <meta name="author" content="gsYang&#39;s blog">
   <meta name="keywords" content="">
   
-    <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+    <meta name="description" content="在工作中常用的操作1. 初始化与拉取 git init: 在某一文件夹下执行此命令，就会创建.git目录，git仓库也就创建好了 git clone 拉取远程仓库代码，默认同名拉取，如果需要重命名，可以使用git clone [url] [new_name]  2. 基本的快照 基本流程： git add：可以添加多个文件，文件路径后面叠加即可git add [file_path…]，不一定要gi">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="http://example.com/2023/04/01/hello-world/index.html">
+<meta property="og:title" content="git使用总结">
+<meta property="og:url" content="http://example.com/2023/04/01/git%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/index.html">
 <meta property="og:site_name" content="gsYang&#39;s blog">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="在工作中常用的操作1. 初始化与拉取 git init: 在某一文件夹下执行此命令，就会创建.git目录，git仓库也就创建好了 git clone 拉取远程仓库代码，默认同名拉取，如果需要重命名，可以使用git clone [url] [new_name]  2. 基本的快照 基本流程： git add：可以添加多个文件，文件路径后面叠加即可git add [file_path…]，不一定要gi">
 <meta property="og:locale" content="zh_CN">
-<meta property="article:published_time" content="2023-03-31T16:19:52.547Z">
-<meta property="article:modified_time" content="2023-03-31T17:05:34.764Z">
+<meta property="og:image" content="http://example.com/img/git-rebase.jpg">
+<meta property="article:published_time" content="2023-03-31T16:59:05.128Z">
+<meta property="article:modified_time" content="2023-03-31T17:06:13.404Z">
 <meta property="article:author" content="gsYang&#39;s blog">
-<meta property="article:tag" content="生活随笔">
+<meta property="article:tag" content="git">
+<meta property="article:tag" content="工作">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="http://example.com/img/git-rebase.jpg">
   
   
   
-  <title>Hello World - gsYang&#39;s blog</title>
+  <title>git使用总结 - gsYang&#39;s blog</title>
 
   <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
 
@@ -197,7 +200,7 @@
       <div class="banner-text text-center fade-in-up">
         <div class="h2">
           
-            <span id="subtitle" data-typed-text="Hello World"></span>
+            <span id="subtitle" data-typed-text="git使用总结"></span>
           
         </div>
 
@@ -208,7 +211,7 @@
     
       <span class="post-meta">
         <i class="iconfont icon-date-fill" aria-hidden="true"></i>
-        <time datetime="2023-04-01 00:19" pubdate>
+        <time datetime="2023-04-01 00:59" pubdate>
           2023年4月1日 凌晨
         </time>
       </span>
@@ -220,7 +223,7 @@
       <span class="post-meta mr-2">
         <i class="iconfont icon-chart"></i>
         
-          367 字
+          1.8k 字
         
       </span>
     
@@ -231,7 +234,7 @@
         
         
         
-          4 分钟
+          16 分钟
         
       </span>
     
@@ -269,24 +272,105 @@
         <div id="board">
           <article class="post-content mx-auto">
             <!-- SEO header -->
-            <h1 style="display: none">Hello World</h1>
+            <h1 style="display: none">git使用总结</h1>
             
             
               <div class="markdown-body">
                 
-                <p>Welcome to <a target="_blank" rel="noopener" href="https://hexo.io/">Hexo</a>! This is your very first post. Check <a target="_blank" rel="noopener" href="https://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a target="_blank" rel="noopener" href="https://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a target="_blank" rel="noopener" href="https://github.com/hexojs/hexo/issues">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo new <span class="hljs-string">&quot;My New Post&quot;</span><br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/writing.html">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo server<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/server.html">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo generate<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/generating.html">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><code class="hljs bash">$ hexo deploy<br></code></pre></td></tr></table></figure>
-
-<p>More info: <a target="_blank" rel="noopener" href="https://hexo.io/docs/one-command-deployment.html">Deployment</a></p>
+                <h2 id="在工作中常用的操作"><a href="#在工作中常用的操作" class="headerlink" title="在工作中常用的操作"></a>在工作中常用的操作</h2><h3 id="1-初始化与拉取"><a href="#1-初始化与拉取" class="headerlink" title="1. 初始化与拉取"></a>1. 初始化与拉取</h3><ul>
+<li>git init: 在某一文件夹下执行此命令，就会创建.git目录，git仓库也就创建好了</li>
+<li>git clone 拉取远程仓库代码，默认同名拉取，如果需要重命名，可以使用git clone [url] [new_name]</li>
+</ul>
+<h3 id="2-基本的快照"><a href="#2-基本的快照" class="headerlink" title="2. 基本的快照"></a>2. 基本的快照</h3><ul>
+<li>基本流程：<ol>
+<li>git add：可以添加多个文件，文件路径后面叠加即可git add [file_path…]，不一定要git add . (此操作会递归的将当前文件夹下所有文件add一下)这样可能会把不需要的文件提交到远程仓库，file_path可以通过git status查看</li>
+<li>git status查看当前状态，红色的是未add到缓存的，绿色是已经add但是未commit的</li>
+<li>git diff</li>
+</ol>
+<ul>
+<li>git diff没有其他参数直接使用此命令会显示所有未add 的更改（即红色部分的更改）</li>
+<li>git diff –cached会显示已经add的尚未commit的更改（即绿色部分的更改）</li>
+<li>git diff HEAD会显示所有改动（包括红色和绿色的更改）</li>
+<li>git diff –stat简略显示哪些文件更改了，但不显示具体更改内容</li>
+</ul>
+<ol start="4">
+<li>git commit：add命令只会写入缓存，没有真正写入存储，commit会真正写入存储</li>
+<li>首先要设置config，这些config就是每一条commit的基本信息，不要乱填<br>1. git config –global user.name ‘Your Name’<br>2. git config –global user.email you@email</li>
+<li>git commit -m [“本次提交的简要信息”]</li>
+</ol>
+</li>
+<li>其它常用方法：<ul>
+<li>git reset<ul>
+<li>git reset HEAD – [file_name]将当前已经add进缓存的file_name文件移出缓存</li>
+<li>git reset [commit_no]可以回退到commit_no版本</li>
+</ul>
+</li>
+<li>git rm</li>
+</ul>
+</li>
+</ul>
+<h3 id="3-分支与合并"><a href="#3-分支与合并" class="headerlink" title="3. 分支与合并"></a>3. 分支与合并</h3><ul>
+<li>基本流程<ul>
+<li>git branch<ul>
+<li>git branch列出可用的分支，*号标记的分支就是当前分支</li>
+<li>git branch [branch_name]创建叫branch_name的新分支</li>
+</ul>
+</li>
+<li>git checkout<ul>
+<li>git checkout [branch_name]切换到branch_name的分支</li>
+<li>git checkout -b [branch_name]创建并切换到branch_name分支</li>
+<li>git checkout -d [branch_name]删除分支</li>
+</ul>
+</li>
+<li>git merge<ul>
+<li>git merge [branch_name]将当前分支和branch_name分支合并</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<h3 id="4-其他"><a href="#4-其他" class="headerlink" title="4. 其他"></a>4. 其他</h3><ul>
+<li>git submodule</li>
+</ul>
+<h2 id="在工作中常用的场景"><a href="#在工作中常用的场景" class="headerlink" title="在工作中常用的场景"></a>在工作中常用的场景</h2><h3 id="取消当前修改的内容（还未add、commit）"><a href="#取消当前修改的内容（还未add、commit）" class="headerlink" title="取消当前修改的内容（还未add、commit）"></a>取消当前修改的内容（还未add、commit）</h3><ul>
+<li>git checkout – file_name</li>
+<li>git checkout .取消当前目录下所有修改内容</li>
+</ul>
+<h3 id="修改已经add的文件（还未commit）"><a href="#修改已经add的文件（还未commit）" class="headerlink" title="修改已经add的文件（还未commit）"></a>修改已经add的文件（还未commit）</h3><ul>
+<li>git reset HEAD <file_name></li>
+</ul>
+<h3 id="修改已经commit的文件"><a href="#修改已经commit的文件" class="headerlink" title="修改已经commit的文件"></a>修改已经commit的文件</h3><ul>
+<li>git reset <commit_number>回退版本</li>
+</ul>
+<h3 id="修改已经推到远程仓库的文件"><a href="#修改已经推到远程仓库的文件" class="headerlink" title="修改已经推到远程仓库的文件"></a>修改已经推到远程仓库的文件</h3><ul>
+<li>git push -f修改后强制再推上去，-f 强制上推</li>
+</ul>
+<h3 id="提交MR之前需要rebase一下"><a href="#提交MR之前需要rebase一下" class="headerlink" title="提交MR之前需要rebase一下"></a>提交MR之前需要rebase一下</h3><ul>
+<li>因为是多人合作编写代码，可能出现其它分支提前合入主分支，而你的分支没有加入这一部分代码</li>
+<li>具体操作<ul>
+<li>git pull origin clickhouse_service:clickhouse_service origin是所要拉取的git远程源clickhouse_service是主分支，此步骤就是将主分支更新为最新代码</li>
+<li>git checkout &lt;当前要提交的分支名&gt;切回当前分支</li>
+<li>git rebase clickhouse_servicereabse操作<ul>
+<li>Rebase 操作，会分析两个分支共同祖先，然后从公共祖先一次往后将clickhouse_service每个提交节点与当前分支合并，直到合并到最后一个节点。<br><img src="/img/git-rebase.jpg" srcset="/img/loading.gif" lazyload alt="git rebase"></li>
+<li>每合并一个节点需要add、git rebase –continue</li>
+</ul>
+</li>
+<li>执行命令之后，再提交MR操作，这样的好处是master分支上很清晰，不会有多余的commit提交记录（相比直接merge）<br>合并已经commit的节点</li>
+</ul>
+</li>
+<li>git rebase -i HEAD~2将Head指向的最近的两个commit合并<ul>
+<li>将不需要的commit前面的pick改为s或其它，具体可以看解释，pick代表保留当前，s代表合并到前一分支</li>
+<li>将提交的信息修改统一</li>
+<li>可能会产生冲突<ul>
+<li>git status查看冲突，并进入冲突文件，解决冲突</li>
+<li>git add &lt;文件名&gt; 添加解决冲突后的文件</li>
+<li>git status确认已经无冲突</li>
+<li>git rebase –continue</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
 
                 
               </div>
@@ -305,7 +389,7 @@
     
       <span class="category-chain">
         
-  <a href="/categories/%E9%9A%8F%E7%AC%94/" class="category-chain-item">随笔</a>
+  <a href="/categories/%E6%8A%80%E6%9C%AF%E6%96%87%E7%AB%A0/" class="category-chain-item">技术文章</a>
   
   
 
@@ -320,7 +404,9 @@
     <div class="post-meta">
       <i class="iconfont icon-tags"></i>
       
-        <a href="/tags/%E7%94%9F%E6%B4%BB%E9%9A%8F%E7%AC%94/">#生活随笔</a>
+        <a href="/tags/git/">#git</a>
+      
+        <a href="/tags/%E5%B7%A5%E4%BD%9C/">#工作</a>
       
     </div>
   
@@ -332,8 +418,8 @@
 
   <div class="license-box my-3">
     <div class="license-title">
-      <div>Hello World</div>
-      <div>http://example.com/2023/04/01/hello-world/</div>
+      <div>git使用总结</div>
+      <div>http://example.com/2023/04/01/git使用总结/</div>
     </div>
     <div class="license-meta">
       
@@ -377,18 +463,12 @@
                   <article class="post-prev col-6">
                     
                     
-                      <a href="/2023/04/01/git%E4%BD%BF%E7%94%A8%E6%80%BB%E7%BB%93/" title="git使用总结">
-                        <i class="iconfont icon-arrowleft"></i>
-                        <span class="hidden-mobile">git使用总结</span>
-                        <span class="visible-mobile">上一篇</span>
-                      </a>
-                    
                   </article>
                   <article class="post-next col-6">
                     
                     
-                      <a href="/2023/03/30/MSCN%E8%AE%BA%E6%96%87%E6%80%BB%E7%BB%93/" title="MSCN论文总结">
-                        <span class="hidden-mobile">MSCN论文总结</span>
+                      <a href="/2023/04/01/hello-world/" title="Hello World">
+                        <span class="hidden-mobile">Hello World</span>
                         <span class="visible-mobile">下一篇</span>
                         <i class="iconfont icon-arrowright"></i>
                       </a>
