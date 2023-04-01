@@ -8,7 +8,7 @@
     <link href="/2023/04/01/%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93%E4%B8%8E%E5%8F%8D%E6%80%9D/"/>
     <url>/2023/04/01/%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93%E4%B8%8E%E5%8F%8D%E6%80%9D/</url>
     
-    <content type="html"><![CDATA[<h1 id="记录第一次搭建博客"><a href="#记录第一次搭建博客" class="headerlink" title="记录第一次搭建博客"></a>记录第一次搭建博客</h1><h2 id="博客主题及其选取原因"><a href="#博客主题及其选取原因" class="headerlink" title="博客主题及其选取原因"></a>博客主题及其选取原因</h2><p>博客的主题是学习与生活，内容包括了技术总结、论文分享、生活随笔。我选择该主题也是想记录一下日常的学习到了那些知识，记录下生活的精彩瞬间。日后也会继续更新。</p><h2 id="博客页面布局"><a href="#博客页面布局" class="headerlink" title="博客页面布局"></a>博客页面布局</h2><p>博客页面主要有五个方面，首页、归档、分类、标签、关于，每个页面主体内容放在正中间，顶部放置背景图片，主题内容两侧根据不同页面有不同的设置，比如文章页面两侧就是文章标题和各段内容标题。</p><ul><li>首页：博客主体，每篇文章的简要介绍会在首页展示</li><li>归档：列出了每篇文章，及其撰写时间</li><li>分类：一共有三种类别，技术总结、论文分享、随笔，每篇文章都会有其划分类别，可以在分类中查看每种类别的文章</li><li>标签：每篇文章会有自定义的标签，这样可以更快的定位到需要的文章</li><li>关于：该页是我自己的介绍</li></ul><h2 id="博客搭建技术"><a href="#博客搭建技术" class="headerlink" title="博客搭建技术"></a>博客搭建技术</h2><p>本博客主要采用hexo框架 + markdown，并用git做版本控制。<br>具体搭建流程如下:</p><ol><li>实现要保证系统已经安装npm、git</li><li>安装hexo<ul><li>安装：<code>npm install -g hexo-cli</code></li></ul></li><li>布置简易hexo<ul><li><code>hexo init &lt;folder&gt;</code></li></ul></li><li>安装一些依赖包<ul><li><code>npm install</code></li></ul></li><li>更换主题<ul><li>将<code>_config.yml</code>配置文件中theme改为fluid</li></ul></li><li>hexo的一些常用命令<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs verilog">hexo clean <span class="hljs-comment">//用于清理缓存文件</span><br>hexo <span class="hljs-keyword">generate</span> <span class="hljs-comment">//用于生成静态文件</span><br>hexo server <span class="hljs-comment">//用于启动本地服务器</span><br>hexo deploy <span class="hljs-comment">//用于部署网站</span><br></code></pre></td></tr></table></figure></li></ol><p>这样就将基本博客搭建完成，可以在其中使用markdown格式写文章，也可以用简单的html、css修改样式，创建新页面。</p><h2 id="博客样式设计及其美学考量"><a href="#博客样式设计及其美学考量" class="headerlink" title="博客样式设计及其美学考量"></a>博客样式设计及其美学考量</h2><p>在使用hexo主题时，也是浏览了很多theme，最终选择了fluid主题样式，我觉着主要原因有以下几点：</p><ol><li>博客主题设计简洁，同时具有轻快的体验和优雅的颜值</li><li>博客结构清晰，可以方便的修改一些样式，并且可以根据自身喜好设计一些页面</li><li>页面整体是上下结构，下方页面再细分左、中、右三个模块，这样的设计很符合美学考量</li></ol><h2 id="遇到的困难"><a href="#遇到的困难" class="headerlink" title="遇到的困难"></a>遇到的困难</h2><ol><li>对git工具不够熟悉，通过本次博客搭建也进一步熟悉了git的使用，具体可看博客文章</li><li>在安装hexo时，npm和node版本没有对应，导致<code>npm install</code>时一直出错，会遇到很多奇怪的错误，最后才发现是版本问题</li><li>第一次搭建博客，对hexo框架不够熟悉，在写文章时，不会使用其已经实现的功能，想要添加一些样式和内容是会与原有样式冲突。</li></ol>]]></content>
+    <content type="html"><![CDATA[<h1 id="记录第一次搭建博客"><a href="#记录第一次搭建博客" class="headerlink" title="记录第一次搭建博客"></a>记录第一次搭建博客</h1><h2 id="博客主题及其选取原因"><a href="#博客主题及其选取原因" class="headerlink" title="博客主题及其选取原因"></a>博客主题及其选取原因</h2><p>博客的主题是学习与生活，内容包括了技术总结、论文分享、生活随笔。我选择该主题也是想记录一下日常的学习到了哪些知识，记录下生活的精彩瞬间。日后也会继续更新。</p><h2 id="博客页面布局"><a href="#博客页面布局" class="headerlink" title="博客页面布局"></a>博客页面布局</h2><p>博客页面主要有五个方面，首页、归档、分类、标签、关于，每个页面主体内容放在正中间，顶部放置背景图片，主题内容两侧根据不同页面有不同的设置，比如文章页面两侧就是文章标题和各段内容标题。</p><ul><li>首页：博客主体，每篇文章的简要介绍会在首页展示</li><li>归档：列出了每篇文章标题，及其撰写时间</li><li>分类：一共有三种类别，技术总结、论文分享、随笔，每篇文章都会有其划分类别，可以在分类中查看每种类别的文章</li><li>标签：每篇文章会有自定义的标签，这样可以更快的定位到需要的文章</li><li>关于：该页是我自己的介绍</li></ul><h2 id="博客搭建技术"><a href="#博客搭建技术" class="headerlink" title="博客搭建技术"></a>博客搭建技术</h2><p>本博客主要采用hexo框架 + markdown，并用git做版本控制。<br>具体搭建流程如下:</p><ol><li>实现要保证系统已经安装npm、git</li><li>安装hexo<ul><li>安装：<code>npm install -g hexo-cli</code></li></ul></li><li>布置简易hexo<ul><li><code>hexo init &lt;folder&gt;</code></li></ul></li><li>安装一些依赖包<ul><li><code>npm install</code></li></ul></li><li>更换主题<ul><li>将<code>_config.yml</code>配置文件中theme改为fluid</li></ul></li><li>hexo的一些常用命令<figure class="highlight verilog"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><code class="hljs verilog">hexo clean <span class="hljs-comment">//用于清理缓存文件</span><br>hexo <span class="hljs-keyword">generate</span> <span class="hljs-comment">//用于生成静态文件</span><br>hexo server <span class="hljs-comment">//用于启动本地服务器</span><br>hexo deploy <span class="hljs-comment">//用于部署网站</span><br></code></pre></td></tr></table></figure></li></ol><p>这样就将基本博客搭建完成，可以在其中使用markdown格式写文章，也可以用简单的html、css修改样式，创建新页面。</p><h2 id="博客样式设计及其美学考量"><a href="#博客样式设计及其美学考量" class="headerlink" title="博客样式设计及其美学考量"></a>博客样式设计及其美学考量</h2><p>在使用hexo主题时，也是浏览了很多theme，最终选择了fluid主题样式，我觉着主要原因有以下几点：</p><ol><li>博客主题设计简洁，同时具有轻快的体验和优雅的颜值</li><li>博客结构清晰，可以方便的修改一些样式，并且可以根据自身喜好设计一些页面</li><li>页面整体是上下结构，下方页面再细分左、中、右三个模块，这样的设计很符合美学考量</li></ol><h2 id="遇到的困难"><a href="#遇到的困难" class="headerlink" title="遇到的困难"></a>遇到的困难</h2><ol><li>对git工具不够熟悉，通过本次博客搭建也进一步熟悉了git的使用，具体可看博客文章</li><li>在安装hexo时，npm和node版本没有对应，导致<code>npm install</code>时一直出错，会遇到很多奇怪的错误，最后才发现是版本问题</li><li>第一次搭建博客，对hexo框架不够熟悉，在写文章时，不会使用其已经实现的功能，还有就是想要添加一些样式和内容可能出现与原有样式冲突。</li></ol>]]></content>
     
     
     <categories>
@@ -99,9 +99,9 @@
     
     <tags>
       
-      <tag>Autotune</tag>
-      
       <tag>AI4DB</tag>
+      
+      <tag>Autotune</tag>
       
     </tags>
     
@@ -126,9 +126,9 @@
     
     <tags>
       
-      <tag>AI4DB</tag>
-      
       <tag>论文总结</tag>
+      
+      <tag>AI4DB</tag>
       
     </tags>
     
