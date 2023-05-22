@@ -4,6 +4,31 @@
   
   
   <entry>
+    <title>github action使用总结</title>
+    <link href="/2023/05/21/github_action/"/>
+    <url>/2023/05/21/github_action/</url>
+    
+    <content type="html"><![CDATA[<h3 id="github-action是什么"><a href="#github-action是什么" class="headerlink" title="github action是什么"></a>github action是什么</h3><p>GitHub Actions是GitHub提供的一项持续集成和持续部署（CI&#x2F;CD）服务，它允许开发者自动化软件开发生命周期中的各种任务，例如构建和测试代码、发布软件包、部署应用程序等等。</p><p>GitHub Actions是基于一系列YAML文件的自动化工作流程（workflows）来实现的。这些工作流程可以通过GitHub平台上的各种事件（例如代码提交、拉取请求、问题等）自动触发，并且可以在不同的操作系统、编程语言和开发工具之间进行交互和集成。</p><h3 id="创建github-action的步骤"><a href="#创建github-action的步骤" class="headerlink" title="创建github action的步骤"></a>创建github action的步骤</h3><ol><li>创建一个.github&#x2F;workflows目录。</li><li>在该目录中创建一个新的YAML文件，用于定义工作流程。</li><li>使用on关键字定义触发工作流程的事件。例如：on: push表示每次代码推送时触发工作流程。</li><li>使用jobs关键字定义一个或多个任务（jobs）。</li><li>在每个任务中，指定要运行的步骤（steps）。</li><li>在步骤中，使用uses关键字引用现有的GitHub Actions或自定义操作。</li><li>保存文件并将其提交到GitHub仓库中。</li></ol><h3 id="举一个例子"><a href="#举一个例子" class="headerlink" title="举一个例子"></a>举一个例子</h3><p>该例子是指每天每小时的第10分钟去执行<code>print.py</code>脚本</p><figure class="highlight yaml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><code class="hljs yaml"><span class="hljs-attr">name:</span> <span class="hljs-string">run</span> <span class="hljs-string">python</span> <span class="hljs-string">script</span><br><br><span class="hljs-attr">on:</span><br>  <span class="hljs-attr">workflow_dispatch:</span><br>    <span class="hljs-attr">inputs:</span><br>  <span class="hljs-attr">schedule:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">cron:</span> <span class="hljs-string">&#x27;10 * * * *&#x27;</span><br><br><span class="hljs-attr">jobs:</span><br>  <span class="hljs-attr">build:</span><br>    <span class="hljs-attr">runs-on:</span> <span class="hljs-string">ubuntu-latest</span><br>    <span class="hljs-attr">steps:</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/checkout@v2</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Set</span> <span class="hljs-string">up</span> <span class="hljs-string">Python</span><br>      <span class="hljs-attr">uses:</span> <span class="hljs-string">actions/setup-python@v2</span><br>      <span class="hljs-attr">with:</span><br>        <span class="hljs-attr">python-version:</span> <span class="hljs-number">3.8</span>  <span class="hljs-comment"># 可以根据需要指定不同的Python版本</span><br>    <span class="hljs-bullet">-</span> <span class="hljs-attr">name:</span> <span class="hljs-string">Run</span> <span class="hljs-string">Python</span> <span class="hljs-string">script</span><br>      <span class="hljs-attr">run:</span> <span class="hljs-string">python</span> <span class="hljs-string">test/print.py</span>  <span class="hljs-comment"># 运行 Python 脚本</span><br></code></pre></td></tr></table></figure>]]></content>
+    
+    
+    <categories>
+      
+      <category>技术文章</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>github</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
     <title>博客总结与反思</title>
     <link href="/2023/04/01/%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93%E4%B8%8E%E5%8F%8D%E6%80%9D/"/>
     <url>/2023/04/01/%E5%8D%9A%E5%AE%A2%E6%80%BB%E7%BB%93%E4%B8%8E%E5%8F%8D%E6%80%9D/</url>
